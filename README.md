@@ -32,7 +32,7 @@ Der Kalender wird automatisch aktualisiert, wenn die GitHub Action neue Daten sc
 
 | Quelle | Inhalt |
 |--------|--------|
-| [SIHF Spielplan](https://m.sihf.ch/de/national-teams/mens-national-team/schedule/) | Spielplan (EHT, Olympia, WM-Vorbereitung, WM, …) |
+| [SIHF Spielplan](https://www.sihf.ch/de/nationalteams/mens-national-team/programm/) | Spielplan (EHT, Olympia, WM-Vorbereitung, WM, …) |
 | [IIHF Realtime API](https://realtime.iihf.com/gamestate/GetLatestScoresState/{eventId}) | Live-Resultate (undokumentiert) |
 | [IIHF Hydra Stats](https://stats.iihf.com/Hydra/) | Resultate für abgeschlossene IIHF-Spiele |
 

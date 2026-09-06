@@ -9,16 +9,18 @@ from icalendar import Calendar, Event
 
 from src.models import Game
 
-SIHF_SCHEDULE_URL = "https://m.sihf.ch/de/national-teams/mens-national-team/schedule/"
+SIHF_SCHEDULE_URL = "https://www.sihf.ch/de/nationalteams/mens-national-team/programm/"
 
 DATE_RANGE_PREFIX = re.compile(
-    r"^\d{2}\.\d{2}\.\d{4}\s*-\s*\d{2}\.\d{2}\.\d{4}\s+"
+    r"^\d{2}\.\d{2}\.\d{4}\s*-\s*\d{2}\.\d{2}\.\d{4}\s*:?\s*"
 )
 
 TOURNAMENT_ALIASES: tuple[tuple[str, str], ...] = (
     ("IIHF Ice Hockey World Championship", "WM 2026"),
+    ("IIHF World Championship", "WM"),
     ("Olympic Winter Games", "Olympia 2026"),
     ("Euro Hockey Tour", "EHT"),
+    ("NOCCO Hockey Games", "EHT"),
     ("SWISS Ice Hockey Games", "Swiss Ice Hockey Games"),
     ("WM-Vorbereitung Week", "WM-Vorbereitung"),
     ("Fortuna Hockey Games", "Fortuna Hockey Games"),

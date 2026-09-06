@@ -1,5 +1,5 @@
 sihf:
-  schedule_url: https://m.sihf.ch/de/national-teams/mens-national-team/schedule/
+  schedule_url: https://www.sihf.ch/de/nationalteams/mens-national-team/programm/
   user_agent: iihf-swiss-hockey-men-schedule/1.0
 
 iihf_events:
@@ -25,6 +25,8 @@ iihf_discovery:
   seed_ids: [969, 991]
   tournament_patterns:
     - needle: "IIHF Ice Hockey World Championship"
+      kind: wm
+    - needle: "IIHF World Championship"
       kind: wm
     - needle: "Olympic Winter Games"
       kind: olympic

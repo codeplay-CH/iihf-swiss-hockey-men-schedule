@@ -12,11 +12,12 @@ HYDRA_BASE = "https://stats.iihf.com/Hydra"
 TITLE_RE = re.compile(r"<title>\s*([^<]+?)\s*</title>", re.IGNORECASE)
 YEAR_RE = re.compile(r"\b(20\d{2})\b")
 DATE_RANGE_PREFIX = re.compile(
-    r"^\d{2}\.\d{2}\.\d{4}\s*-\s*\d{2}\.\d{2}\.\d{4}\s+"
+    r"^\d{2}\.\d{2}\.\d{4}\s*-\s*\d{2}\.\d{2}\.\d{4}\s*:?\s*"
 )
 
 DEFAULT_PATTERNS: tuple[tuple[str, str], ...] = (
     ("IIHF Ice Hockey World Championship", "wm"),
+    ("IIHF World Championship", "wm"),
     ("Olympic Winter Games", "olympic"),
 )
 
