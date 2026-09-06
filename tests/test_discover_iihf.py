@@ -36,6 +36,18 @@ def test_extract_tournament_needs_wm_and_olympic() -> None:
     assert TournamentNeed(2026, "olympic") in needs
 
 
+def test_extract_tournament_needs_redesign_title_with_colon() -> None:
+    games = [
+        _sihf_game(
+            "14.05.2027 - 30.05.2027 IIHF World Championship 2027 "
+            "in Düsseldorf & Mannheim / GER"
+        ),
+        _sihf_game("30.06.2026 - 30.06.2026: Media Day"),
+    ]
+    needs = extract_tournament_needs(games, {})
+    assert needs == {TournamentNeed(2027, "wm")}
+
+
 def test_configured_event_covers_need_via_kinds() -> None:
     need = TournamentNeed(2026, "olympic")
     event = {"id": 991, "name": "Olympia 2026", "year": 2026, "kinds": ["olympic"]}
